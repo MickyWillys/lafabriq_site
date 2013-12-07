@@ -1,11 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Le site de la Fabriq va permettre aux compétences de rentrer leur différentes compétences et les demandeurs de compétences de les trouver en utilisant des tags.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 2.0.0
 
 * System dependencies
 
