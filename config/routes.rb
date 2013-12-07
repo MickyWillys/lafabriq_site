@@ -1,4 +1,7 @@
 LafabriqSite::Application.routes.draw do
+  get "static_pages/concept"
+  get "static_pages/equipe"
+  get "static_pages/activites"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
