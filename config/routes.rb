@@ -1,7 +1,13 @@
 LafabriqSite::Application.routes.draw do
-  get "static_pages/concept"
-  get "static_pages/equipe"
-  get "static_pages/activites"
+
+  
+  root  'static_pages#accueil'
+  match '/help',        to: 'static_pages#concept',     via: 'get'
+  match '/about',       to: 'static_pages#equipe',      via: 'get'
+  match '/contact',     to: 'static_pages#activites',   via: 'get'
+  match '/inscription'  to: 'users#new',                via: 'get'
+  get "users/new"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

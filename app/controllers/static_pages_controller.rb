@@ -2,6 +2,9 @@ class StaticPagesController < ApplicationController
   def concept
   end
 
+  def concept
+  end
+
   def equipe
   end
 
