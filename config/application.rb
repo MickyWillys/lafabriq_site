@@ -15,12 +15,8 @@ Bundler.require(:default, Rails.env)
 
 module LafabriqSite
   class Application < Rails::Application
-    #pour que l'appli soit dans la langue de Molière ;)
-    config.i18n.default_locale = :fr
+    
 
-    # Force all access to the app over SSL, use Strict-Transport-Security,
-    # and use secure cookies.
-    config.force_ssl = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -30,8 +26,8 @@ module LafabriqSite
     # config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    #config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :fr
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end

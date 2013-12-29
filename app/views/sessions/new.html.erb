@@ -1,0 +1,19 @@
+<% provide(:title, "Sign in") %>
+<h1>Sign in</h1>
+
+<div class="row">
+  <div class="large-9 small-6 columns">
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.submit "Démarrez une session", class: "button [radius round]" %>
+    <% end %>
+
+    <p>Nouveau Fabricant? <%= link_to "Inscrivez-vous dans le Réseau Solidaire de Compétences de la Fabriq!", signup_path %></p>
+  </div>
+</div>

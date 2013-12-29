@@ -1,7 +1,7 @@
     <nav class="top-bar" data-topbar> 
       <ul class="title-area"> 
         <li class="name"> 
-          <h1><a href="#">My Site</a></h1> 
+          <%= link_to "La Fabriq", root_path, id: "logo" %> 
         </li> 
       </ul> 
 
@@ -9,14 +9,23 @@
         <!-- Right Nav Section --> 
         <ul class="right"> 
           <li class="active">
-            <a href="#">Right Nav Button Active</a>
+            <%= link_to "Home", root_path %>
           </li> 
-          <li class="has-dropdown"> 
-            <a href="#">Right Button with Dropdown</a> 
-            <ul class="dropdown"> 
-              <li><a href="#">First link in dropdown</a></li> 
-            </ul> 
+          <li class="active">
+            <%= link_to "L'équipe", '#' %>
           </li> 
+          <% if signed_in? %>
+            <li class="has-dropdown"> 
+              <%= link_to "Mon univers", current_user %>
+              <ul class="dropdown"> 
+                <li><%= link_to "Mon compte", current_user %></li>
+                <li><%= link_to "Mes compétences", '#' %></li> 
+                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+              </ul> 
+            </li> 
+          <%else%>
+            <li class="active"><li><%= link_to "Sign in", signin_path %></li>
+          <%end%>
 
         </ul> 
         <!-- Left Nav Section --> 
