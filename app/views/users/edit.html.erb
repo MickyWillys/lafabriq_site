@@ -1,0 +1,29 @@
+<% provide(:title, 'Modification Profil') %>
+<h1>Modifier votre profil</h1>
+
+<div class="row">
+  <div class="large-9 small-6 columns">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.label :prenom %>
+      <%= f.text_field :prenom %>
+
+      <%= f.label :nom %>
+      <%= f.text_field :nom %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Sauvegarder les changements", class: "button [radius round]" %>
+    <% end %>
+
+    <%= gravatar_for @user %>
+    <a href="http://gravatar.com/emails">change</a>
+  </div>
+</div>

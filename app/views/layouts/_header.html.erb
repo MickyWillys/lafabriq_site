@@ -14,11 +14,15 @@
           <li class="active">
             <%= link_to "L'équipe", '#' %>
           </li> 
+          <li class="active">
+            <%= link_to "Fabricants", users_path %>
+          </li> 
           <% if signed_in? %>
             <li class="has-dropdown"> 
               <%= link_to "Mon univers", current_user %>
               <ul class="dropdown"> 
                 <li><%= link_to "Mon compte", current_user %></li>
+                <li><%= link_to "Paramètres", edit_user_path(current_user) %></li>
                 <li><%= link_to "Mes compétences", '#' %></li> 
                 <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
               </ul> 
