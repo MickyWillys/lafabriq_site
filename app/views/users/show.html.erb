@@ -1,10 +1,27 @@
 <% provide(:title, @user.nom) %>
 <div class="side-nav aside">
     <section>
+
+      <% if @user.avatar? %>
+        <%= image_tag @user.avatar.url(:small) %>
+        <br/>
+        <%= link_to @user.avatar.url, @user.avatar.url%>
+      <%end%>
+
       <h1>
-        <%= gravatar_for @user %>
         <%= @user.nom %>
         <%= @user.prenom %>
       </h1>
+
+
     </section>
+    <div class="large-9 small-6 columns">
+    <% if @user.competences.any? %>
+      <h3><%= @user.competences.count %> Compétence(s) enregistrées</h3>
+      <ul class="competences">
+        <%= render @user.competences %>
+      </ul>
+     
+    <% end %>
+  </div>
 </div>

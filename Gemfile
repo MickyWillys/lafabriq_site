@@ -7,6 +7,7 @@ gem 'foundation-rails'
 gem "will_paginate-foundation", "~> 5.3.3"  
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
+gem 'paperclip'
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'

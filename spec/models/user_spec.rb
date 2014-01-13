@@ -17,6 +17,7 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:admin) }
+  it { should respond_to(:competences)}
 
   it { should be_valid }
   it { should_not be_admin }
@@ -42,4 +43,20 @@ describe User do
     before { @user.password_confirmation = "mismatch" }
     it { should_not be_valid }
   end
+
+
+  describe "la présences de compétences" do
+    before{@user.save}
+
+    it "should destroy all the competences associated whit him" do
+      competences = @user.competences
+      @user.destroy 
+      competences.each do |competence| 
+        Competence. find_by_id(competence.id).should be_nil
+      end
+    end
+  end
+
+
+
 end

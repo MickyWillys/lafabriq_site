@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="large-9 small-6 columns">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user , :html => {:multipart => true}) do |f| %>
       <%= render 'shared/error_messages' %>
       <%= f.label :prenom %>
       <%= f.text_field :prenom %>
@@ -13,6 +13,9 @@
 
       <%= f.label :email %>
       <%= f.text_field :email %>
+
+      <%= f.label :avatar %><br />
+      <%= f.file_field :avatar %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>

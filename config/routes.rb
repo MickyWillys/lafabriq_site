@@ -2,6 +2,7 @@ LafabriqSite::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :competences
 
   root  'static_pages#accueil'
   match '/signup',      to: 'users#new',            via: 'get'
@@ -10,7 +11,7 @@ LafabriqSite::Application.routes.draw do
   match '/help',        to: 'static_pages#concept',     via: 'get'
   match '/about',       to: 'static_pages#equipe',      via: 'get'
   match '/contact',     to: 'static_pages#activites',   via: 'get'
-  match '/signup',  to: 'users#new',                via: 'get'
+  match '/signup',      to: 'users#new',                via: 'get'
 
   
   # The priority is based upon order of creation: first created -> highest priority.
