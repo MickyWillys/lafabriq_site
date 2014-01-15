@@ -109,6 +109,7 @@ GEM
       mime-types
     pg (0.15.1)
     polyglot (0.3.3)
+    populator (1.0.0)
     pry (0.9.12.4)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -222,6 +223,7 @@ DEPENDENCIES
   jquery-rails (= 3.0.4)
   paperclip
   pg (= 0.15.1)
+  populator
   rails (= 4.0.2)
   rails_12factor (= 0.0.2)
   rspec-rails (= 2.13.1)

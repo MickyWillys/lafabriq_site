@@ -1,0 +1,25 @@
+<% provide(:title, 'Nouvelle compétences') %>
+<h1>Entrer une nouvelle compétences</h1>
+<div class="row">
+  <div class="large-9 small-6 columns">
+	<%= form_for(@competences) do |f| %>
+	  <%= render 'shared/error_messages', object: f.object %>
+	  <div class="field">
+	  	<%= f.label :titre %>
+	    <%= f.text_field :titre %>
+	    <%= f.label :descriptif %>
+	    <%= f.text_area :descriptif,placeholder: "Décrivez ccette compétence dans le contexte que vous souhaitez" %>
+	    <%= f.label :experience %>
+	    <%= f.text_area :descriptif,placeholder: "Décrivez votre expérience dans cette compétence dans le contexte que vous souhaitez" %>
+
+		<%= radio_button_tag(:diplome, "Je dispose d'un diplome certifiant cette compétence") %>
+	<!-- 	<%= label_tag(:age_child, "I am younger than 21") %> -->
+		<%= radio_button_tag(:diplome, "je n'ai pas de diplome pour cette compétences") %>
+		<%= label_tag(:age_adult, "I'm over 21") %>
+
+	    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+	  </div>
+	  <%= f.submit "Sauvegarder cette compétences", class: "button [radius round]" %>
+	<% end %>
+  </div>
+</div>

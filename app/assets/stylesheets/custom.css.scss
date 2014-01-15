@@ -84,7 +84,12 @@ input {
     }
   }
 }
-
+.user-button {
+  height: 40px;
+  float: right;
+  margin-right: 400px;
+  // padding-right: 500px;
+}
 .competence-user{
   border: 2px solid grey;
 }

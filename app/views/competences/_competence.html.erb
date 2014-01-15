@@ -1,6 +1,7 @@
 <li>
   <div class="large-9 small-6 columns competence-user">
-  	<h3><%= competence.titre %></h3>
+    
+  	<h3><%= competence.id %> <%= competence.titre %></h3>
     <dl class="accordion" data-accordion>
       <dd>
         <a href="#panel1-<%= competence.id %>">Description</a>
@@ -17,6 +18,7 @@
           <%= competence.experience %>
         </div>
       </dd>
-  </dl>
+    </dl>
+  </div>
 </li>
 

@@ -1,9 +1,12 @@
-LafabriqSite::Application.routes.draw do
+  LafabriqSite::Application.routes.draw do
 
-  resources :users
+  
   resources :sessions, only: [:new, :create, :destroy]
-  resources :competences
 
+  resources :users do
+    resources :competences
+  end
+  
   root  'static_pages#accueil'
   match '/signup',      to: 'users#new',            via: 'get'
   match '/signin',      to: 'sessions#new',         via: 'get'
