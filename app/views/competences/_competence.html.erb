@@ -1,24 +1,10 @@
 <li>
   <div class="large-9 small-6 columns competence-user">
-    
-  	<h3><%= competence.id %> <%= competence.titre %></h3>
-    <dl class="accordion" data-accordion>
-      <dd>
-        <a href="#panel1-<%= competence.id %>">Description</a>
-        <div id="panel1-<%= competence.id %>" class="content">
-          <%= competence.descriptif %>
-          <div id="edit-competence">
-              icon avec action route éditer 
-          </div>
-        </div>
-      </dd>
-      <dd>
-        <a href="#panel2-<%= competence.id %>">Experience</a>
-        <div id="panel2-<%= competence.id %>" class="content">
-          <%= competence.experience %>
-        </div>
-      </dd>
-    </dl>
+
+    <%= link_to user_competence_path(@user.id, competence.id) do %>
+      <h3><%= competence.titre %></h3> -- <span>Check it out!</span>
+    <% end %>
+  	<!-- <h3><%= competence.id %> <%= competence.titre %></h3> -->
   </div>
 </li>
 
