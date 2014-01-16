@@ -24,7 +24,9 @@ namespace :db do
     users = User.all(limit: 10)
     6.times do
       titre =  Faker::Lorem.sentences(1).first[0...20]
-      descriptif =  Faker::Lorem.sentences(5).first
+      descriptif=""
+      Faker::Lorem.sentences(5).each { |sent| descriptif += "#{sent} "}
+      
       experience =  Faker::Lorem.sentences(1).first
       diplome =  Faker::Lorem.sentences(1).first
       statut_validation =  Faker::Lorem.sentences(1).first

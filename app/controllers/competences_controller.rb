@@ -44,6 +44,6 @@ class CompetencesController < ApplicationController
   private
 
     def competences_params
-      params.require(:competence).permit(:titre, :descriptif, :experience)
+      params.require(:competence).permit(:titre, :descriptif, :experience, :tags_list)
     end
 end
