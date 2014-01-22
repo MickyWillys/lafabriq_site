@@ -35,6 +35,13 @@
           <%= @competence.experience %>
         </div>
       </dd>
+      <dd>
+        <a href="#panel3-<%= @competence.id %>">Disponibilité</a>
+        <div id="panel3-<%= @competence.id %>" class="content">
+          <p>Disponibilité pour cette compétence du <strong><%= @competence.dispo_debut.strftime("%d/%m/%Y") %></strong> au <strong><%= @competence.dispo_fin.strftime("%d/%m/%Y") %></strong></p>
+          
+        </div>
+      </dd>
     </dl>
   </div>
 </div>
