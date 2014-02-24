@@ -41,9 +41,14 @@ class CompetencesController < ApplicationController
     @competence = @user.competences.find(params[:id])
   end
 
+  def change_dispo
+    @user = current_user
+    @competence = @user.competences.find(params[:id])
+  end
+
   private
 
     def competences_params
-      params.require(:competence).permit(:titre, :descriptif, :experience, :tags_list)
+      params.require(:competence).permit(:titre, :descriptif, :experience, :dispo_debut, :dispo_fin, :tags_list)
     end
 end

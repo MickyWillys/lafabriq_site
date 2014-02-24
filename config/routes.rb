@@ -3,9 +3,9 @@
   
   resources :sessions, only: [:new, :create, :destroy]
 
-  resources :users do
-    resources :competences
-  end
+  resources :users
+  resources :competences
+  
   
   root  'static_pages#accueil'
   match '/signup',      to: 'users#new',            via: 'get'
@@ -16,7 +16,7 @@
   match '/contact',     to: 'static_pages#activites',   via: 'get'
   match '/signup',      to: 'users#new',                via: 'get'
 
-  
+  get 'users/:id/competences/:id/change_dispo'  => 'competences#change_dispo',  as: :change_dispo
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
